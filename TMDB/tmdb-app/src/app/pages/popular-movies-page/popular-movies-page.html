@@ -1,0 +1,16 @@
+<h1>Popular Movies</h1>
+
+<div class="row">
+    @for(movie of movieList(); track movie.id) {
+    <div class="col-md-3 mb-4">
+        <section class="card h-100">
+            <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top" [alt]="movie.title">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p class="card-text mb-1">Estreno: {{movie.release_date}}</p>
+                <p class="card-text">Valoración: {{movie.vote_average}}</p>
+            </div>
+        </section>
+    </div>
+    }
+</div>
